@@ -1,7 +1,10 @@
 import express from 'express';
 
 // middlewares
-import reactRouterMiddleware from './server/reactRouterMiddleware';
+import reactRouterMiddleware from './server/middleware/reactRouter';
+
+// routes
+import serverRoute from './server/route';
 
 const app = express();
 
@@ -22,8 +25,8 @@ if (env === 'development') {
   console.log('dev mode with hot reload');
 }
 
-app.use('/static', express.static('./frontend/build'));
-
+app.use('/static', express.static('./build'));
+app.use(serverRoute);
 app.use(reactRouterMiddleware());
 
-app.listen(3000, () => console.log('La app corre en el puerto 3000'));
+app.listen(3000, () => console.log('Go to localhost:3000'));

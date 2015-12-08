@@ -8,10 +8,10 @@ module.exports = {
   devtool: '#source-map',
   entry: [
     'webpack-hot-middleware/client',
-    './frontend/main'
+    './client/main'
   ],
   output: {
-    path: path.resolve(__dirname, 'frontend/build'),
+    path: path.resolve(__dirname, 'build'),
     publicPath: '/static/',
     filename: 'bundle.js'
   },
@@ -40,7 +40,7 @@ module.exports = {
       test: /\.jsx?$/,
       exclude: /node_modules/,
       loaders: [ 'babel' ],
-      include: [path.resolve('./frontend'), path.resolve('./shared')]
+      include: [path.resolve('./client'), path.resolve('./shared')]
     }
    ]
   }

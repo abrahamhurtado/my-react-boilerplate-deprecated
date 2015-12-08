@@ -1,0 +1,56 @@
+:local .header {
+  display: flex;
+  background: #333;
+  color: #f7f7f7;
+}
+
+:local .header > h1 {
+  margin: 0;
+  padding: 0 15px;
+  flex: 0 1 auto;
+  text-align: center;
+}
+
+:local(.menu) {
+  margin: 0;
+  padding: 0;
+  flex: 1 1 auto;
+  list-style: none;
+  display: flex;
+}
+
+:local .menu > li {
+  line-height: 43px;
+  padding: 0 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all .2s;
+}
+
+:local(.menu) > li > a {
+  color: #f7f7f7;
+}
+
+:local .menu > li:hover {
+  background: #f7f7f7;
+  box-shadow: 0 0 5px #333;
+}
+
+:local .menu > li:hover a {
+  color: #333;
+}
+
+:global body {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  font-family: sans-serif;
+}
+
+:global html {
+  color: #333;
+}
+
+:global a {
+  text-decoration: none;
+  transition: all .2s;
+}

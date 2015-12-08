@@ -8,19 +8,21 @@ export default class HelloWorld extends React.Component {
   }
   render () {
     return (
-      <div>
-        <h1>Hello, world!</h1>
+      <div
+        className={ styles.header }
+      >
+        <h1>My React Boilerplate</h1>
         <ul
           className={ styles.menu }
         >
           <li>
             <Link to="/">
-              Go to home
+              Home
             </Link>
           </li>
           <li>
             <Link to="/children">
-              Go to children route
+              Children
             </Link>
           </li>
         </ul>

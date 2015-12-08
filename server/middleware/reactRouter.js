@@ -2,8 +2,8 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RoutingContext } from 'react-router';
 import { createLocation } from 'history';
-import routes from '../shared/routes';
-import html from '../shared/html';
+import routes from '../../shared/routes';
+import html from '../../shared/html';
 
 export default () => (req, res) => {
 

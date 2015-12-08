@@ -5,10 +5,10 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   devtool: '#source-map',
   entry: [
-    './frontend/main'
+    './client/main'
   ],
   output: {
-    path: path.resolve(__dirname, 'frontend/build'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
     publicPath: '/static/'
   },
@@ -38,7 +38,7 @@ module.exports = {
       test: /\.jsx?$/,
       exclude: /node_modules/,
       loaders: [ 'babel' ],
-      include: [path.resolve('./frontend'), path.resolve('./shared')]
+      include: [path.resolve('./client'), path.resolve('./shared')]
     } ]
   }
 };
