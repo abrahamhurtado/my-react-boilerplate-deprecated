@@ -25,7 +25,7 @@
   "devDependencies": {
     "autoprefixer": "6.1.2",
     "babel-loader": "6.2.0",
-    "babel-plugin-react-transform": "git://github.com/justingreenberg/babel-plugin-react-transform.git#b4aec39af5dbea68c85d30564e6ab9926838961a",
+    "babel-plugin-react-transform": "2.0.0-beta1",
     "babel-preset-es2015": "6.3.13",
     "babel-preset-react": "6.3.13",
     "babel-preset-stage-0": "6.3.13",
