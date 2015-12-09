@@ -33,14 +33,29 @@ module.exports = {
     return [autoprefixer];
   },
   module: {
-    loaders: [ {
+    loaders: [{
       test: /\.css$/,
-      loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader')
+      loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
     }, {
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      loaders: [ 'babel' ],
-      include: [path.resolve('./client'), path.resolve('./shared')]
+      loader: 'babel',
+      include: [path.resolve('./client'), path.resolve('./shared')],
+      query: {
+        "env": {
+          "development": {
+            "plugins": [
+              ["react-transform", {
+                "transforms": [{
+                  "transform": "react-transform-hmr",
+                  "imports": ["react"],
+                  "locals": ["module"]
+                }]
+              }]
+            ]
+          }
+        }
+      }
     }
    ]
   }

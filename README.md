@@ -10,11 +10,11 @@ It was made for my personal use so I can use it as a skeleton for my own project
 
 - Support for ES201X with Babel 6.
 
-- Webpack configs and Express server ready for development and production.
+- Express server and Webpack configs for development and production.
 
 - CSS Modules and PostCSS for CSS greatness.
 
-- Support for Hot Module Replacement will be added to this boilerplate as soon as the new version of ```babel-plugin-react-transform``` is released.
+- Hot Reloading for both React components and CSS Modules for the best developer experience! (+ nodemon for server-side-only code)
 
 ## Scripts
 
